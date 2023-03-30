@@ -9,6 +9,5 @@ alert(som)
 
 
 document.getElementById("antwoord").innerText = som;
-
 console.log(som)
 console.log('Om het gewenste aantal autos kwijt te kunnen heb ik verdiepingen nodig.')

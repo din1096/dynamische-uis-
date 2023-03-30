@@ -1,12 +1,33 @@
-const FRIS_PRIJS = 2
-const BIER_PRIJS = 4
-const WIJN_PRIJS = 5
+const FRIS_PRIJS = 2.00;
+const BIER_PRIJS = 3.00;
+const WIJN_PRIJS = 4.00;
+var bon = [];
 
-let bestelling = {bier: 0, wijn:0, fris : 0,};
-let bestel = true
-while ( bestel) {
-    koop = prompt('wat wil je kopen');
-    if (koop == 'fris'|| koop == 'bier' || koop == 'wijn') {
-        hoeveelhijd = prompt('hoeveel wilt u hebben')
+
+while (true) {
+    let koop = prompt('welk drinken wil je kopen')
+    if (koop == "niks") {
+        break;
+    } else {
+        if (koop !== 'fris' && koop !== 'bier' && koop !== 'wijn') {
+            alert('dat producht hebben we niet');
+        } else {
+            let hoeveel = prompt("hoeveel " + koop + " wil je hebben?");
+            let lijst = true;
+            for (var i = 0; < bon.length i++) {
+                if (bon[i].koop == koop) {
+                    bon[i].aantal = parseInt(bon[i].aantal) + parseInt(aantal);
+                    lijst = false;
+                    break;
+                }
+            }
+            if (!lijst) {
+                bon.push({koop: koop, hoeveel: hoeveel});
+            }
+            alert(hoeveel + " " + koop + " is toegevoegd aan de bon");
+        }
+
     }
 }
+
+
