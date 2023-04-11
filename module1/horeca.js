@@ -5,7 +5,8 @@ var bon = [];
 
 
 while (true) {
-    let koop = prompt('welk drinken wil je kopen')
+    let koop = prompt('welke drinken wil je kopen?')
+    alert(koop)
     if (koop == "niks") {
         break;
     } else {
@@ -14,7 +15,7 @@ while (true) {
         } else {
             let hoeveel = prompt("hoeveel " + koop + " wil je hebben?");
             let lijst = true;
-            for (var i = 0; < bon.length i++) {
+            for (i = 0; < bon.length i++) {
                 if (bon[i].koop == koop) {
                     bon[i].aantal = parseInt(bon[i].aantal) + parseInt(aantal);
                     lijst = false;
@@ -25,9 +26,13 @@ while (true) {
                 bon.push({koop: koop, hoeveel: hoeveel});
             }
             alert(hoeveel + " " + koop + " is toegevoegd aan de bon");
+
+            
+
         }
 
     }
 }
 
+document.getElementById("bonnetje").innerText = bon;
 
