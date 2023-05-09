@@ -17,13 +17,14 @@
         //Eigen acties
         spaceShip.run(function () {
             // code  start
-            for (let i = 0; i < 2; i++) {
-                spaceShip.wait();
-}           for (let i = 0; i < 3; i++) {
-            spaceShip.moveBackward();
-}            for (let i = 0; i < 2; i++) {
-            spaceShip.wait();
-}                   
+            for(let x = 0; x < 3; x++){
+            spaceShip.wait()
+            spaceShip.wait()
+            for(let i = 0; i < 3; i++)
+            spaceShip.moveBackward()
+            }
+
+   
        // code  einde
         });
     </script>
