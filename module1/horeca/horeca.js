@@ -6,25 +6,47 @@ const prijs = {
     bier: 3,
     wijn: 4,
 }
-
-function bestellen() {
+function vraag_drank() {
     while (true) {
-        let drinken = prompt("wat voor drinken wilt u bestellen?");
-
-        if (drinken in prijs) {
-            while (true) {
-                let aantal = parseInt(prompt('hoeveel' + drinken + 'wil je ?'))
-                if (drinken in lijst) {
-                    lijst[drinken] += aantal;
-                } else {
-                    lijst[drinken] = aantal;
-                }
-                break;
-            }
-        } else if (drinken == 'stop') {
+        var drinken = prompt("wat voor drinken wilt u bestellen?");
+        if (drinken in prijs || drinken == 'stop') {
             break;
         } else {
             alert('dat producht hebben we niet');
+        }
+    }
+    return drinken
+}
+function vraag_aantal(drinken) {
+    while (true) {
+        var aantal = parseInt(prompt('hoeveel' + drinken + 'wil je ?'))
+        if (!isNaN(aantal)) {
+            break
+        }
+
+    }
+    return aantal
+}
+function voeg_toe(drinken,lijst,aantal) {
+    if (drinken in lijst) {
+        lijst[drinken] += aantal;
+    } else {
+        lijst[drinken] = aantal;
+    }
+    console.dir(lijst) 
+    return lijst
+}
+function bestellen() {
+    while (true) {
+        let drinken = vraag_drank()
+        
+        if (drinken in prijs) {
+ {
+                let aantal = vraag_aantal(drinken)
+                voeg_toe(drinken,lijst,aantal)
+            }
+        } else if (drinken == 'stop') {
+            break;
         }
     }
 }
