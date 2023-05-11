@@ -53,7 +53,6 @@ function bestellen() {
 bestellen();
 
 let totaal = 0;
-
 for ( x in lijst) {
     console.log("prijs:" + prijs[x] + 'euro')
     console.log("aantal" + lijst[x])
