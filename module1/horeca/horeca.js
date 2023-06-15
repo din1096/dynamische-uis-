@@ -53,15 +53,11 @@ function bestellen() {
 bestellen();
 
 let totaal = 0;
-let fris_prijs = 0
 for ( x in lijst) {
     console.log("prijs:" + prijs[x] + 'euro')
     console.log("aantal" + lijst[x])
     totaal += prijs[x] * lijst[x]
-    fris_prijs += prijs[0] * lijst[x]
 }
 console.log(totaal)
 let totaal_prijs = "totaal:" + Math.round(totaal) + "euro"
-let prijs_fris = "totaal:" + Math.round(fris_prijs) + "euro"
-console.log(prijs_fris)
 document.getElementById("totaal_prijs").innerHTML = totaal_prijs
