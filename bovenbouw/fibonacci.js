@@ -8,8 +8,7 @@ function fibonacci(x) {
         a = temp;
         reeks.push(b);
     }
-    let guldensnee = b / a;
-    return [reeks, guldensnee];
+    return [reeks];
 }
 document.getElementById("antwoord").innerText = fibonacci;
 let aantal = parseInt(prompt("voer een getal in:"));
