@@ -1,0 +1,16 @@
+body {
+    background-color: grey;
+}
+
+#container {
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 800px;
+    margin: auto;
+}
+#container button {
+    margin: 5px; 
+}
